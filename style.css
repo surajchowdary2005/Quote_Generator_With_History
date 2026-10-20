@@ -1,0 +1,402 @@
+
+:root {
+  --purple: #7055e8;
+  --purple-dark: #5136c8;
+  --pink: #ee3f83;
+  --text: #292b60;
+  --muted: #8585b5;
+  --surface: #ffffff;
+  --border: #e8e5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(145deg, #f8f7ff, #efedff);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+button {
+  font-family: inherit;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 28px 20px 25px;
+  color: white;
+  background: linear-gradient(120deg, #9575fa, #6550d9);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-icon {
+  font-size: 32px;
+  margin-right: 12px;
+}
+
+.hero h1 {
+  display: inline-block;
+  font-size: clamp(28px, 4vw, 43px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.hero p {
+  margin-top: 5px;
+  color: #eee9ff;
+  font-size: 17px;
+}
+
+.hero-decoration {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #ffffff12;
+}
+
+.decoration-one {
+  top: -110px;
+  left: -55px;
+}
+
+.decoration-two {
+  right: -100px;
+  bottom: -140px;
+}
+
+.container {
+  width: min(890px, 92%);
+  margin: 30px auto 45px;
+}
+
+.quote-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 35px 32px 25px;
+  background: #ffffffdf;
+  border: 1px solid #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px #5140b318;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.quote-card:hover {
+  box-shadow: 0 18px 42px #5140b322;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 5px 16px;
+  color: var(--purple-dark);
+  background: #eee9ff;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.quote-symbol {
+  height: 67px;
+  margin-top: 10px;
+  color: #9279f7;
+  font-family: Georgia, serif;
+  font-size: 85px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+#quoteText {
+  max-width: 650px;
+  margin: 8px auto 15px;
+  color: #30346e;
+  font-size: clamp(21px, 3vw, 29px);
+  font-weight: 600;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.quote-author {
+  margin-bottom: 25px;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.quote-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 160px;
+  padding: 13px 20px;
+  color: white;
+  border: 0;
+  border-radius: 13px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn span {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 17px #38305c24;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:focus-visible {
+  outline: 3px solid #aa9aff;
+  outline-offset: 3px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, #7c5cf4, #6750df);
+}
+
+.btn-favorite {
+  background: linear-gradient(120deg, #f44891, #e82f78);
+}
+
+.btn-dark {
+  background: linear-gradient(120deg, #484b70, #343651);
+}
+
+.message {
+  min-height: 25px;
+  margin-top: 15px;
+  color: #159b76;
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.history-section {
+  margin-top: 32px;
+}
+
+.history-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.history-heading h2 {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.heart-icon {
+  margin-right: 7px;
+  color: var(--pink);
+  font-size: 30px;
+}
+
+.history-heading p {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.favorites-list {
+  display: grid;
+  gap: 13px;
+}
+
+.favorite-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 19px 21px;
+  background: #ffffffed;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #4b3ca20a;
+  transition: border-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  animation: appear 0.35s ease both;
+}
+
+.favorite-item:hover {
+  border-color: #c9bcff;
+  box-shadow: 0 7px 20px #5140b311;
+  transform: translateY(-2px);
+}
+
+.favorite-item > p:first-child {
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.favorite-item .author {
+  margin-top: 5px;
+  color: var(--purple);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.favorite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.favorite-actions button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.favorite-actions button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.favorite-actions button:first-child {
+  color: var(--purple-dark);
+  background: #eee9ff;
+}
+
+.favorite-actions .delete-btn {
+  color: white;
+  background: linear-gradient(120deg, #f44891, #e82f78);
+}
+
+.empty-message {
+  padding: 28px 20px;
+  color: var(--muted);
+  text-align: center;
+  background: #ffffffb8;
+  border: 1px dashed #d5cdf9;
+  border-radius: 14px;
+}
+
+footer {
+  padding: 25px 15px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 12px;
+}
+
+footer span {
+  color: var(--pink);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding: 25px 14px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+
+  .hero-icon {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 94%;
+    margin-top: 20px;
+  }
+
+  .quote-card {
+    padding: 27px 16px 18px;
+    border-radius: 17px;
+  }
+
+  #quoteText {
+    font-size: 21px;
+  }
+
+  .quote-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .history-heading h2 {
+    font-size: 21px;
+  }
+
+  .favorite-item {
+    grid-template-columns: 1fr;
+    padding: 17px;
+  }
+
+  .favorite-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quote Generator | Daily Inspiration</title>
+  <meta name="description" content="Discover inspiring quotes, save your favorites, and share motivation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-decoration decoration-one"></div>
+    <div class="hero-decoration decoration-two"></div>
+
+    <div class="hero-content">
+      <span class="hero-icon">✦</span>
+      <h1>Quote Generator</h1>
+      <p>Find inspiration, one quote at a time.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="quote-card">
+      <span class="eyebrow">YOUR DAILY INSPIRATION</span>
+
+      <div class="quote-symbol">“</div>
+
+      <blockquote id="quoteText" aria-live="polite">
+        Click New Quote to get inspired!
+      </blockquote>
+
+      <p id="quoteAuthor" class="quote-author">— Unknown</p>
+
+      <div class="quote-actions">
+        <button id="newQuoteBtn" class="btn btn-primary">
+          <span>⟳</span> New Quote
+        </button>
+
+        <button id="favoriteBtn" class="btn btn-favorite">
+          <span>♡</span> Add Favorite
+        </button>
+
+        <button id="copyBtn" class="btn btn-dark">
+          <span>▢</span> Copy Quote
+        </button>
+      </div>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="history-section">
+      <div class="history-heading">
+        <div>
+          <h2><span class="heart-icon">♥</span> Favorites History</h2>
+          <p>Your favorite quotes, saved in one place.</p>
+        </div>
+      </div>
+
+      <div id="favoritesList" class="favorites-list">
+        <p class="empty-message">Loading favorites...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with <span>♥</span> | Quote Generator with History</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
